@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+  import React, { useState } from 'react';
 import { supabase } from './supabaseClient';
 
 const AZUL = '#1B6FAB';
@@ -553,13 +553,13 @@ export default function QuestionarioDEI() {
 
             {form.situacao_profissional && form.situacao_profissional !== 'Desempregado(a)' && (
               <>
-                <label style={styles.label}>Empresa atual</label>
+                <label style={styles.label}>Empresa atual ou última que atuou</label>
                 <input style={styles.input} value={form.empresa_atual} onChange={e => set('empresa_atual', e.target.value)} placeholder="Nome da empresa" />
 
-                <label style={styles.label}>Cargo atual</label>
+                <label style={styles.label}>Cargo atual ou último que atuou</label>
                 <input style={styles.input} value={form.cargo_atual} onChange={e => set('cargo_atual', e.target.value)} placeholder="Seu cargo" />
 
-                <label style={styles.label}>Remuneração atual (bruta)</label>
+                <label style={styles.label}>Remuneração atual ou última remuneração (bruta)</label>
                 <input style={styles.input} value={form.salario_atual} onChange={e => set('salario_atual', e.target.value)} placeholder="R$ 0.000,00" />
               </>
             )}
